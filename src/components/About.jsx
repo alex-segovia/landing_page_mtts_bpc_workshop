@@ -15,6 +15,17 @@ import sponsor3Img from '../assets/images/BPC_Logo.svg';
 import sponsor4Img from '../assets/images/PUCP_Logo.png';
 import sponsor5Img from '../assets/images/Telecom_Logo.png';
 
+// IMPORTA LAS FOTOS DE LOS SPEAKERS AQUÍ:
+// (Asegúrate de guardarlas en tu carpeta de assets)
+import speakerAnding from '../assets/images/Anding.png';
+import speakerDebabani from '../assets/images/Debabani.png';
+import speakerOlga from '../assets/images/Olga.png';
+import speakerGlauco from '../assets/images/Glauco.png';
+import speakerImran from '../assets/images/Imran.png';
+import speakerMohammad from '../assets/images/Mohammad.png';
+import speakerJose from '../assets/images/Jose.png';
+import speakerVictor from '../assets/images/Victor.png';
+
 const About = () => {
   const navigate = useNavigate(); 
 
@@ -61,6 +72,18 @@ const About = () => {
     { id: 4, label: 'Seating Layout', src: seatingImg },
     { id: 5, label: 'Main Stage', src: closeUpSetupImg },
     { id: 6, label: 'Team Roundtable', src: interiorViewImg }
+  ];
+
+  // --- ESTRUCTURA DE DATOS PARA SPEAKERS ---
+  const speakersList = [
+    { id: 1, name: 'Anding Zhu', role: 'President', org: 'IEEE MTT-S', photo: speakerAnding },
+    { id: 2, name: 'Debabani Choudhury', role: 'Chair', org: 'IEEE MTT-S BPC', photo: speakerDebabani },
+    { id: 3, name: 'Olga Boric Lubecke', role: 'Co-Chair', org: 'IEEE MTT-S BPC/FDC', photo: speakerOlga },
+    { id: 4, name: 'Glauco Fontgalland', role: 'Co-Chair', org: 'IEEE MTT-S BPC/MGA', photo: speakerGlauco },
+    { id: 5, name: 'Imran Mehdi', role: 'Publications Chair', org: 'IEEE MTT-S', photo: speakerImran },
+    { id: 6, name: 'Mohammad Zarifi', role: 'DML', org: 'IEEE MTT-S', photo: speakerMohammad },
+    { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', photo: speakerJose },
+    { id: 8, name: 'Victor Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', photo: speakerVictor }
   ];
 
   return (
@@ -157,66 +180,26 @@ const About = () => {
           </div>
         </section>
 
-        {/* Section 1: Speakers */}
+        {/* Section 1: Speakers (Mapeado dinámico con imágenes) */}
         <section className="max-w-7xl mx-auto pb-20 px-8 text-center border-b border-blue-900/5">
           <h2 className="text-3xl font-bold text-blue-900 mb-12">MTT-S Keynote Speakers</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Anding Zhu</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">President</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Debabani Choudhury</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Chair</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S BPC</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Olga Boric Lubecke</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Co-Chair</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S BPC/FDC</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Glauco Fontgalland</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Co-Chair</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S BPC/MGA</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Imran Mehdi</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Publications Chair</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Mohammad Zarifi</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">DML</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Jose Rayas Sanchez</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Speakers Bureau</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors"></div>
-              <h4 className="font-bold text-xl text-blue-900">Victor Lubecke</h4>
-              <p className="text-sm text-gray-600 font-semibold mt-1">Speakers Bureau</p>
-              <p className="text-sm text-orange-500 italic font-medium">IEEE MTT-S</p>
-            </div>
+            {speakersList.map(speaker => (
+              <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
+                {/* Contenedor de la imagen del speaker */}
+                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
+                  <img 
+                    src={speaker.photo} 
+                    alt={speaker.name} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+                <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
+                <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
+                <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
+              </div>
+            ))}
           </div>
         </section>
 
