@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import entranceImg from '../assets/images/B100_1.jpeg'; 
@@ -9,12 +10,49 @@ import interiorViewImg from '../assets/images/B100_6.jpeg';
 
 // IMPORTA TUS LOGOS DE SPONSORS AQUÍ:
 import sponsor1Img from '../assets/images/IEEE_Logo.png';
-// import sponsor2Img from '../assets/images/sponsor2.png';
-// import sponsor3Img from '../assets/images/sponsor3.png';
-// import sponsor4Img from '../assets/images/sponsor4.png';
+import sponsor2Img from '../assets/images/MTT_Logo.svg';
+import sponsor3Img from '../assets/images/BPC_Logo.svg';
+import sponsor4Img from '../assets/images/PUCP_Logo.png';
+import sponsor5Img from '../assets/images/Telecom_Logo.png';
 
 const About = () => {
   const navigate = useNavigate(); 
+
+  // --- LÓGICA DEL CONTADOR REGRESIVO ---
+  const calculateTimeLeft = () => {
+    // Fecha objetivo: 25 de mayo de 2026 a las 8:30 AM (Hora de Lima: UTC-5)
+    const targetDate = new Date('2026-05-25T08:30:00-05:00');
+    const now = new Date();
+    const difference = targetDate - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    } else {
+      // Si la fecha ya pasó, se queda en ceros
+      timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    // Limpieza del intervalo cuando el componente se desmonta
+    return () => clearInterval(timer);
+  }, []);
+
+  // Formatear números para que siempre tengan 2 dígitos (ej: 09 en vez de 9)
+  const formatNumber = (num) => String(num).padStart(2, '0');
 
   const auditoriumPhotos = [
     { id: 1, label: 'B100 Entrance', src: entranceImg },
@@ -30,19 +68,20 @@ const About = () => {
       
       {/* Hero Section with Background Image */}
       <header 
-        className="relative text-white py-24 md:py-32 px-8 text-center bg-cover bg-center"
+        className="relative text-white py-20 md:py-28 px-4 sm:px-8 text-center bg-cover bg-center"
         style={{ 
-          backgroundImage: "linear-gradient(rgba(30, 58, 138, 0.5), rgba(15, 23, 42, 0.5)), url('https://s3.us-east-1.amazonaws.com/ca-webprod/media/bonitos-hoteles-en-miraflores.webp?s=2405427')" 
+          // Oscurecí un poquito el degradado (0.6 y 0.7) para que el contador y botones resalten más
+          backgroundImage: "linear-gradient(rgba(30, 58, 138, 0.6), rgba(15, 23, 42, 0.7)), url('https://s3.us-east-1.amazonaws.com/ca-webprod/media/bonitos-hoteles-en-miraflores.webp?s=2405427')" 
         }}
       >
         <div className="relative z-10 max-w-6xl mx-auto">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-orange-400 uppercase tracking-wide">
+          <h3 className="text-lg md:text-2xl font-semibold mb-4 text-orange-400 uppercase tracking-wide">
             IEEE MTT-S Broadening Participation Committee (BPC)
           </h3>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
             International Workshop <br/>
-            <span className="text-4xl md:text-5xl lg:text-6xl font-medium text-blue-100 mt-3 block">
+            <span className="text-3xl md:text-5xl lg:text-6xl font-medium text-blue-100 mt-3 block">
               Applied Microwaves: Bridging the gap between Theory and Industry
             </span>
           </h1>
@@ -60,12 +99,41 @@ const About = () => {
             </div>
           </div>
 
-          <button 
-            onClick={() => navigate('/program')}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-xl"
-          >
-            View Program
-          </button>
+          {/* --- CONTADOR REGRESIVO --- */}
+          <div className="flex justify-center gap-2 sm:gap-4 mb-10">
+            {[
+              { label: 'Days', value: timeLeft.days },
+              { label: 'Hours', value: timeLeft.hours },
+              { label: 'Minutes', value: timeLeft.minutes },
+              { label: 'Seconds', value: timeLeft.seconds }
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/20 rounded-xl p-3 sm:p-4 w-20 sm:w-24 shadow-lg">
+                <span className="text-2xl md:text-4xl font-bold text-white tabular-nums">
+                  {formatNumber(item.value)}
+                </span>
+                <span className="text-xs md:text-sm text-orange-300 uppercase tracking-wider mt-1">
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* --- BOTONES DE ACCIÓN --- */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <button 
+              onClick={() => navigate('/registration')}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-xl w-full sm:w-auto"
+            >
+              Register Now
+            </button>
+            <button 
+              onClick={() => navigate('/program')}
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/50 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-xl w-full sm:w-auto"
+            >
+              View Program
+            </button>
+          </div>
+
         </div>
       </header>
 
@@ -212,41 +280,46 @@ const About = () => {
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img 
                   src={sponsor1Img} 
-                  //src="https://via.placeholder.com/300x150.png?text=Sponsor+1" 
                   alt="Sponsor 1" 
                   className="max-w-full max-h-full object-contain" 
                 />
               </div>
               
-              {/* Sponsor 2 
+              {/* Sponsor 2 */}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img 
-                  // src={sponsor2Img} 
-                  src="https://via.placeholder.com/300x150.png?text=Sponsor+2" 
+                  src={sponsor2Img} 
                   alt="Sponsor 2" 
                   className="max-w-full max-h-full object-contain" 
                 />
               </div>
               
-              {/* Sponsor 3 
+              {/* Sponsor 3 */}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img 
-                  // src={sponsor3Img} 
-                  src="https://via.placeholder.com/300x150.png?text=Sponsor+3" 
+                  src={sponsor3Img} 
                   alt="Sponsor 3" 
                   className="max-w-full max-h-full object-contain" 
                 />
               </div>
               
-              {/* Sponsor 4
+              {/* Sponsor 4*/}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img 
-                  // src={sponsor4Img} 
-                  src="https://via.placeholder.com/300x150.png?text=Sponsor+4" 
+                  src={sponsor4Img} 
                   alt="Sponsor 4" 
                   className="max-w-full max-h-full object-contain" 
                 /> 
-              </div>*/}
+              </div>
+
+              {/* Sponsor 5*/}
+              <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
+                <img 
+                  src={sponsor5Img} 
+                  alt="Sponsor 5" 
+                  className="max-w-full max-h-full object-contain" 
+                /> 
+              </div>
             </div>
           </div>
         </section>
