@@ -8,4 +8,8 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  base: '/workshop2026/',
+  build: {
+    outDir: 'dist/workshop2026'
+  }
 })
