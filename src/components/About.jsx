@@ -105,7 +105,7 @@ const About = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
             International Workshop <br/>
             <span className="text-3xl md:text-5xl lg:text-6xl font-medium text-blue-100 mt-3 block">
-              Applied Microwaves: Bridging the gap between Theory and Industry
+              Applied Microwaves: Connecting Academia and Industry
             </span>
           </h1>
           
