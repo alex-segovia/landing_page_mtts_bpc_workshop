@@ -23,10 +23,10 @@ const Program = () => {
           sessionName: "Opening Session",
           chair: "Olga Boric Lubecke",
           talks: [
-            { time: "9:00 - 9:05", tag: "Plenary 1", title: "General Chair (Welcome Remarks)", presenter: "Manuel Yarlequé" },
-            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Coming soon" },
-            { time: "9:10 - 9:20", tag: "Plenary 3", title: "IEEE MTT-S President (Welcome Remarks)", presenter: "Anding Zhu" },
-            { time: "9:20 - 9:40", tag: "Plenary 4", title: "Broadening Participation with RF to THz Technologies in the AI Era", presenter: "Debabani Choudhury" }
+            { time: "9:00 - 9:05", tag: "Plenary 1", title: "General Chair (Welcome Remarks)", presenter: "Manuel Yarlequé (PUCP)" },
+            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Francisco Rumiche (PUCP)" },
+            { time: "9:10 - 9:20", tag: "Plenary 3", title: "IEEE MTT-S President (Welcome Remarks)", presenter: "Anding Zhu (IEEE MTT-S)" },
+            { time: "9:20 - 9:40", tag: "Plenary 4", title: "Broadening Participation with RF to THz Technologies in the AI Era", presenter: "Debabani Choudhury (IEEE MTT-S BPC)" }
           ]
         },
         { 
@@ -39,11 +39,11 @@ const Program = () => {
           type: "session",
           time: "10:00 - 11:00",
           sessionName: "MTT-S Session",
-          chair: "Glauco Fontgalland",
+          chair: "Glauco Fontgalland (IEEE MTT-S BPC/MGA)",
           talks: [
-            { time: "10:00 - 10:20", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu" },
-            { time: "10:20 - 10:40", tag: "Keynote 2", title: "ISAC Biomedical Sensing", presenter: "Victor Lubecke" },
-            { time: "10:40 - 11:00", tag: "Keynote 3", title: "DML", presenter: "Yuan or Tomassoni" }
+            { time: "10:00 - 10:20", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu (IEEE MTT-S)" },
+            { time: "10:20 - 10:40", tag: "Keynote 2", title: "ISAC Biomedical Sensing", presenter: "Victor Lubecke (IEEE MTT-S)" },
+            { time: "10:40 - 11:00", tag: "Keynote 3", title: "Microwave/RF Devices and their Interactions with Novel Nano-Materials for Sensing and Communication Applications", presenter: "Mohammad Zarifi (IEEE MTT-S)" }
           ]
         },
         { 
@@ -57,7 +57,7 @@ const Program = () => {
           time: "11:15 - 11:45",
           sessionName: "Student Competition",
           title: "3MPC (Three Minute Presentation Competition)",
-          presenter: "Debabani Choudhury"
+          presenter: "Debabani Choudhury (IEEE MTT-S BPC)"
         },
         {
           type: "session",
@@ -65,8 +65,8 @@ const Program = () => {
           sessionName: "Regional Faculty Session",
           chair: "Jose Rayas",
           talks: [
-            { time: "11:45 - 12:00", tag: "Keynote 4", title: "Coming soon", presenter: "Manuel Yarlequé" },
-            { time: "12:00 - 12:15", tag: "Keynote 5", title: "Coming soon", presenter: "Coming soon" },
+            { time: "11:45 - 12:00", tag: "Keynote 4", title: "Coming soon", presenter: "Manuel Yarlequé (PUCP)" },
+            { time: "12:00 - 12:15", tag: "Keynote 5", title: "Coming soon", presenter: "Ebert San Román Castillo (UCSP)" },
             { time: "12:15 - 12:45", tag: "Keynote 6", title: "Coming soon", presenter: "Coming soon" }
           ]
         },
@@ -82,7 +82,7 @@ const Program = () => {
           sessionName: "",
           chair: "",
           talks: [
-            { time: "14:00 - 14:20", tag: "Keynote 7", title: "How to write technical articles and Academic Proposals for MTT-S", presenter: "Olga Boric Lubecke" }
+            { time: "14:00 - 14:20", tag: "Keynote 7", title: "How to write technical articles and Academic Proposals for MTT-S", presenter: "Olga Boric Lubecke (IEEE MTT-S BPC)" }
           ]
         },
         {
@@ -124,10 +124,10 @@ const Program = () => {
           sessionName: "Latin America MTT-S Engagement Session",
           chair: "Olga Boric Lubecke",
           talks: [
-            { time: "9:00 - 9:20", tag: "Keynote 1", title: "Latin America + MTT-S MGA", presenter: "Glauco Fontgalland" },
-            { time: "9:20 - 9:40", tag: "Keynote 2", title: "Latin America Topic", presenter: "Jose Rayas" },
+            { time: "9:00 - 9:20", tag: "Keynote 1", title: "Latin America + MTT-S MGA", presenter: "Glauco Fontgalland (IEEE MTT-S BPC/MGA)" },
+            { time: "9:20 - 9:40", tag: "Keynote 2", title: "Latin America Topic", presenter: "Jose Rayas (IEEE MTT-S)" },
             { time: "9:40 - 10:00", tag: "Keynote 3", title: "Peru", presenter: "Coming soon" },
-            { time: "10:00 - 10:45", tag: "Panel", title: "Panel 1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with BPC Activities", presenter: "Anding, Glauco, Jose, Manuel, Victor", moderator: "Debabani Choudhury" }
+            { time: "10:00 - 10:45", tag: "Panel", title: "Panel 1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with BPC Activities", presenter: "Anding Zhu (IEEE MTT-S), Glauco Fontgalland (IEEE MTT-S BPC/MGA), Jose Rayas (IEEE MTT-S), Manuel Yarlequé (PUCP), Ebert San Román Castillo (UCSP), Victor Lubecke (IEEE MTT-S)", moderator: "Debabani Choudhury (IEEE MTT-S BPC)" }
           ]
         },
         { 
@@ -140,12 +140,12 @@ const Program = () => {
           type: "session",
           time: "11:00 - 13:00",
           sessionName: "Industry Session",
-          chair: "Manuel Yarlequé",
+          chair: "Manuel Yarlequé (PUCP)",
           talks: [
             { time: "11:00 - 11:15", tag: "Industry Keynote 1", title: "Huawei", presenter: "Coming soon" },
             { time: "11:15 - 11:40", tag: "Industry Keynote 2", title: "Nokia", presenter: "Coming soon" },
             { time: "11:40 - 12:00", tag: "Industry Keynote 3", title: "Coming soon", presenter: "Coming soon" },
-            { time: "12:00 - 13:00", tag: "Industry Academia Panel Discussion", title: "Panel on Industry Academia Engagement in South American Landscape", presenter: "Nokia, Huawei, Manuel, Debabani, Jose, Anding, Olga, Glauco", moderator: "Debabani Choudhury" },
+            { time: "12:00 - 13:00", tag: "Industry Academia Panel Discussion", title: "Panel on Industry Academia Engagement in South American Landscape", presenter: "Nokia, Huawei, Ebert San Román Castillo (UCSP), Manuel Yarlequé (PUCP), Debabani Choudhury (IEEE MTT-S BPC), Jose Rayas (IEEE MTT-S), Anding Zhu (IEEE MTT-S), Olga Boric Lubecke (IEEE MTT-S BPC), Glauco Fontgalland (IEEE MTT-S BPC/MGA)", moderator: "Debabani Choudhury (IEEE MTT-S BPC)" },
           ]
         },
         { 
@@ -160,7 +160,7 @@ const Program = () => {
           sessionName: "",
           chair: "",
           talks: [
-            { time: "14:00 - 15:00", tag: "Group Mentoring Event", title: "7-10 Mentors", presenter: "Anding, Glauco, Jose, Manuel, Victor, Olga, Debabani" }
+            { time: "14:00 - 15:00", tag: "Group Mentoring Event", title: "7-10 Mentors", presenter: "Anding Zhu (IEEE MTT-S), Glauco Fontgalland (IEEE MTT-S BPC/MGA), Jose Rayas (IEEE MTT-S), Manuel Yarlequé (PUCP), Ebert San Román Castillo (UCSP), Victor Lubecke (IEEE MTT-S), Olga Boric Lubecke (IEEE MTT-S BPC), Debabani Choudhury (IEEE MTT-S BPC)" }
           ]
         },
         {
@@ -169,7 +169,7 @@ const Program = () => {
           sessionName: "",
           chair: "",
           talks: [
-            { time: "15:00 - 15:40", tag: "Award Session / Vote of Thanks", title: "Announce the Winners of Three Competitions; Award and Plaque Distribution", presenter: "Manuel, Debabani, Anding, Olga, Glauco" }
+            { time: "15:00 - 15:40", tag: "Award Session / Vote of Thanks", title: "Announce the Winners of Three Competitions; Award and Plaque Distribution", presenter: "Manuel Yarlequé (PUCP), Debabani Choudhury (IEEE MTT-S BPC), Anding Zhu (IEEE MTT-S), Olga Boric Lubecke (IEEE MTT-S BPC), Glauco Fontgalland (IEEE MTT-S BPC/MGA)" }
           ]
         },
         {
@@ -177,7 +177,7 @@ const Program = () => {
           time: "15:40 - 15:50",
           sessionName: "",
           title: "Close Workshop",
-          presenter: "Manuel Yarlequé, Debabani Choudhury"
+          presenter: "Manuel Yarlequé (PUCP), Debabani Choudhury (IEEE MTT-S BPC)"
         },
         { 
           type: "break", 

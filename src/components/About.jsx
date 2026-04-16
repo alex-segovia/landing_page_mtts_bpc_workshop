@@ -71,14 +71,14 @@ const About = () => {
 
   // --- ESTRUCTURA DE DATOS PARA SPEAKERS ---
   const speakersList = [
-    { id: 1, name: 'Anding Zhu', role: 'President', org: 'IEEE MTT-S', photo: speakerAnding },
-    { id: 2, name: 'Debabani Choudhury', role: 'Chair', org: 'IEEE MTT-S BPC', photo: speakerDebabani },
-    { id: 3, name: 'Olga Boric Lubecke', role: 'Co-Chair', org: 'IEEE MTT-S BPC/FDC', photo: speakerOlga },
-    { id: 4, name: 'Glauco Fontgalland', role: 'Co-Chair', org: 'IEEE MTT-S BPC/MGA', photo: speakerGlauco },
-    { id: 5, name: 'Imran Mehdi', role: 'Publications Chair', org: 'IEEE MTT-S', photo: speakerImran },
-    { id: 6, name: 'Mohammad Zarifi', role: 'DML', org: 'IEEE MTT-S', photo: speakerMohammad },
-    { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', photo: speakerJose },
-    { id: 8, name: 'Victor Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', photo: speakerVictor }
+    { id: 1, name: 'Anding Zhu', role: 'President', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerAnding },
+    { id: 2, name: 'Debabani Choudhury', role: 'Chair', org: 'IEEE MTT-S BPC', role2: 'IEEE Fellow', photo: speakerDebabani },
+    { id: 3, name: 'Olga Boric Lubecke', role: 'Vice Chair and Mentoring Lead', org: 'IEEE MTT-S BPC/FDC', role2: 'IEEE Fellow', photo: speakerOlga },
+    { id: 4, name: 'Glauco Fontgalland', role: 'Vice Chair', org: 'IEEE MTT-S BPC/MGA', role2: 'R9 Coordinator', photo: speakerGlauco },
+    { id: 5, name: 'Imran Mehdi', role: 'Publications Chair', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerImran },
+    { id: 6, name: 'Mohammad Zarifi', role: 'Distinguished Microwave Lecturer', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerMohammad },
+    { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'Vice Chair, Education Committee', photo: speakerJose },
+    { id: 8, name: 'Victor Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor }
   ];
 
   return (
@@ -195,6 +195,7 @@ const About = () => {
                 <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
                 <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
                 <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
+                <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role2}</p>
               </div>
             ))}
           </div>
