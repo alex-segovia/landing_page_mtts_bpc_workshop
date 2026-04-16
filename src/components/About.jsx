@@ -16,7 +16,6 @@ import sponsor4Img from '../assets/images/PUCP_Logo.png';
 import sponsor5Img from '../assets/images/Telecom_Logo.png';
 
 // IMPORTA LAS FOTOS DE LOS SPEAKERS AQUÍ:
-// (Asegúrate de guardarlas en tu carpeta de assets)
 import speakerAnding from '../assets/images/Anding.png';
 import speakerDebabani from '../assets/images/Debabani.png';
 import speakerOlga from '../assets/images/Olga.png';
@@ -31,7 +30,6 @@ const About = () => {
 
   // --- LÓGICA DEL CONTADOR REGRESIVO ---
   const calculateTimeLeft = () => {
-    // Fecha objetivo: 25 de mayo de 2026 a las 8:30 AM (Hora de Lima: UTC-5)
     const targetDate = new Date('2026-05-25T08:30:00-05:00');
     const now = new Date();
     const difference = targetDate - now;
@@ -46,7 +44,6 @@ const About = () => {
         seconds: Math.floor((difference / 1000) % 60)
       };
     } else {
-      // Si la fecha ya pasó, se queda en ceros
       timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
     return timeLeft;
@@ -58,11 +55,9 @@ const About = () => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-    // Limpieza del intervalo cuando el componente se desmonta
     return () => clearInterval(timer);
   }, []);
 
-  // Formatear números para que siempre tengan 2 dígitos (ej: 09 en vez de 9)
   const formatNumber = (num) => String(num).padStart(2, '0');
 
   const auditoriumPhotos = [
@@ -93,7 +88,6 @@ const About = () => {
       <header 
         className="relative text-white py-20 md:py-28 px-4 sm:px-8 text-center bg-cover bg-center"
         style={{ 
-          // Oscurecí un poquito el degradado (0.6 y 0.7) para que el contador y botones resalten más
           backgroundImage: "linear-gradient(rgba(30, 58, 138, 0.6), rgba(15, 23, 42, 0.7)), url('https://s3.us-east-1.amazonaws.com/ca-webprod/media/bonitos-hoteles-en-miraflores.webp?s=2405427')" 
         }}
       >
@@ -180,21 +174,24 @@ const About = () => {
           </div>
         </section>
 
-        {/* Section 1: Speakers (Mapeado dinámico con imágenes) */}
+        {/* Section 1: Speakers (Mapeado dinámico con imágenes ajustadas) */}
         <section className="max-w-7xl mx-auto pb-20 px-8 text-center border-b border-blue-900/5">
           <h2 className="text-3xl font-bold text-blue-900 mb-12">MTT-S Keynote Speakers</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {speakersList.map(speaker => (
               <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
+                
                 {/* Contenedor de la imagen del speaker */}
+                {/* Nota: bg-gray-200 será el color de relleno si la foto no es cuadrada */}
                 <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
                   <img 
                     src={speaker.photo} 
                     alt={speaker.name} 
-                    className="w-full h-full object-cover" 
+                    className={`w-full h-full ${speaker.id === 8 ? 'object-contain' : 'object-cover object-top'}`} 
                   />
                 </div>
+                
                 <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
                 <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
                 <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
