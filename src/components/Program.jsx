@@ -24,9 +24,9 @@ const Program = () => {
           chair: "Olga Boric Lubecke",
           talks: [
             { time: "9:00 - 9:05", tag: "Plenary 1", title: "General Chair (Welcome Remarks)", presenter: "Manuel Yarlequé" },
-            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Dean of FCI PUCP" },
+            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Coming soon" },
             { time: "9:10 - 9:20", tag: "Plenary 3", title: "IEEE MTT-S President (Welcome Remarks)", presenter: "Anding Zhu" },
-            { time: "9:20 - 9:40", tag: "Plenary 4", title: "Broadening Participation with RF to THz Technologies in the AI Era", presenter: "Debabani Choudhury, MTT-S BPC Chair" }
+            { time: "9:20 - 9:40", tag: "Plenary 4", title: "Broadening Participation with RF to THz Technologies in the AI Era", presenter: "Debabani Choudhury" }
           ]
         },
         { 
@@ -41,9 +41,9 @@ const Program = () => {
           sessionName: "MTT-S Session",
           chair: "Glauco Fontgalland",
           talks: [
-            { time: "10:00 - 10:20", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu, MTT-S President" },
-            { time: "10:20 - 10:40", tag: "Keynote 2", title: "ISAC Biomedical Sensing", presenter: "Victor Lubecke, University of Hawaii (SB)" },
-            { time: "10:40 - 11:00", tag: "Keynote 3", title: "DML", presenter: "Yuan or Tomassoni, DML" }
+            { time: "10:00 - 10:20", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu" },
+            { time: "10:20 - 10:40", tag: "Keynote 2", title: "ISAC Biomedical Sensing", presenter: "Victor Lubecke" },
+            { time: "10:40 - 11:00", tag: "Keynote 3", title: "DML", presenter: "Yuan or Tomassoni" }
           ]
         },
         { 
@@ -56,8 +56,8 @@ const Program = () => {
           type: "special",
           time: "11:15 - 11:45",
           sessionName: "Student Competition",
-          title: "3MPC (Three Minute Presentation Competition): 2 Winners from Selected Finalists",
-          presenter: "Debabani"
+          title: "3MPC (Three Minute Presentation Competition)",
+          presenter: "Debabani Choudhury"
         },
         {
           type: "session",
@@ -65,9 +65,9 @@ const Program = () => {
           sessionName: "Regional Faculty Session",
           chair: "Jose Rayas",
           talks: [
-            { time: "11:45 - 12:00", tag: "Keynote 4", title: "???", presenter: "Manuel" },
-            { time: "12:00 - 12:15", tag: "Keynote 5", title: "???", presenter: "Arequipa Speaker 1" },
-            { time: "12:15 - 12:45", tag: "Keynote 6", title: "???", presenter: "Arequipa Speaker 2" }
+            { time: "11:45 - 12:00", tag: "Keynote 4", title: "Coming soon", presenter: "Manuel Yarlequé" },
+            { time: "12:00 - 12:15", tag: "Keynote 5", title: "Coming soon", presenter: "Coming soon" },
+            { time: "12:15 - 12:45", tag: "Keynote 6", title: "Coming soon", presenter: "Coming soon" }
           ]
         },
         { 
@@ -88,8 +88,8 @@ const Program = () => {
         {
           type: "special",
           time: "14:20 - 15:20",
-          sessionName: "Student Competition",
-          title: "Publication/Proposal Mentoring - 2-Group Awards??",
+          sessionName: "Student Competition & Mentoring",
+          title: "Publications & Proposal Mentoring",
           presenter: ""
         },
         { 
@@ -101,8 +101,8 @@ const Program = () => {
         {
           type: "special",
           time: "15:35 - 18:35",
-          sessionName: "Student Mentoring",
-          title: "CST Competition for 3-hours with 15-20 students? --- 2Winners (Cash award)",
+          sessionName: "Student Competition",
+          title: "Student Design Competition",
           presenter: ""
         }
       ]
@@ -110,7 +110,7 @@ const Program = () => {
     day2: {
       date: "Tuesday, May 26, 2026",
       venue: "B100, PUCP Campus, Lima, Perú",
-      theme: "",
+      theme: "Coming soon",
       items: [
         { 
           type: "break", 
@@ -124,10 +124,10 @@ const Program = () => {
           sessionName: "Latin America MTT-S Engagement Session",
           chair: "Olga Boric Lubecke",
           talks: [
-            { time: "9:00 - 9:20", tag: "Keynote 1", title: "Latin America + MTT-S MGA", presenter: "Glauco" },
-            { time: "9:20 - 9:40", tag: "Keynote 2", title: "University Chairman (Welcome Remarks)", presenter: "Jose" },
-            { time: "9:40 - 10:00", tag: "Keynote 3", title: "IEEE MTT-S President (Welcome Remarks)", presenter: "Manuel or Arequipa" },
-            { time: "10:00 - 10:45", tag: "Panel", title: "Panel 1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with BPC Activities", presenter: "Anding, Glauco, Jose, Manuel, Arequipa, Victor" }
+            { time: "9:00 - 9:20", tag: "Keynote 1", title: "Latin America + MTT-S MGA", presenter: "Glauco Fontgalland" },
+            { time: "9:20 - 9:40", tag: "Keynote 2", title: "Latin America Topic", presenter: "Jose Rayas" },
+            { time: "9:40 - 10:00", tag: "Keynote 3", title: "Peru", presenter: "Coming soon" },
+            { time: "10:00 - 10:45", tag: "Panel", title: "Panel 1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with BPC Activities", presenter: "Anding, Glauco, Jose, Manuel, Victor", moderator: "Debabani Choudhury" }
           ]
         },
         { 
@@ -140,12 +140,12 @@ const Program = () => {
           type: "session",
           time: "11:00 - 13:00",
           sessionName: "Industry Session",
-          chair: "Manuel",
+          chair: "Manuel Yarlequé",
           talks: [
-            { time: "11:00 - 11:15", tag: "Industry Keynote 1", title: "Huawei", presenter: "?" },
-            { time: "11:15 - 11:40", tag: "Industry Keynote 2", title: "Nokia", presenter: "?" },
-            { time: "11:40 - 12:00", tag: "Industry Keynote 3", title: "Comp #3", presenter: "?" },
-            { time: "12:00 - 13:00", tag: "Industry Academia Panel Discussion", title: "Panel on Industry Academia Engagement in South American Landscape??", presenter: "Nokia, Huawei, Comp #3, Arequipa, Manuel?, Debabani, Jose, Anding, Olga, Glauco" },
+            { time: "11:00 - 11:15", tag: "Industry Keynote 1", title: "Huawei", presenter: "Coming soon" },
+            { time: "11:15 - 11:40", tag: "Industry Keynote 2", title: "Nokia", presenter: "Coming soon" },
+            { time: "11:40 - 12:00", tag: "Industry Keynote 3", title: "Coming soon", presenter: "Coming soon" },
+            { time: "12:00 - 13:00", tag: "Industry Academia Panel Discussion", title: "Panel on Industry Academia Engagement in South American Landscape", presenter: "Nokia, Huawei, Manuel, Debabani, Jose, Anding, Olga, Glauco", moderator: "Debabani Choudhury" },
           ]
         },
         { 
@@ -160,7 +160,7 @@ const Program = () => {
           sessionName: "",
           chair: "",
           talks: [
-            { time: "14:00 - 15:00", tag: "Group Mentoring Event", title: "7-10 Mentors", presenter: "Anding, Glauco, Jose, Manuel, Arequipa, Victor, Olga, Debabani" }
+            { time: "14:00 - 15:00", tag: "Group Mentoring Event", title: "7-10 Mentors", presenter: "Anding, Glauco, Jose, Manuel, Victor, Olga, Debabani" }
           ]
         },
         {
@@ -177,7 +177,7 @@ const Program = () => {
           time: "15:40 - 15:50",
           sessionName: "",
           title: "Close Workshop",
-          presenter: "Manuel, Debabani"
+          presenter: "Manuel Yarlequé, Debabani Choudhury"
         },
         { 
           type: "break", 
@@ -240,7 +240,7 @@ const Program = () => {
       {/* RENDERIZADO CONDICIONAL BASADO EN EL FORMATO */}
       {format === 'list' ? (
         
-        /* === VISTA LISTA (La que ya tenías) === */
+        /* === VISTA LISTA === */
         <div className="space-y-6">
           {currentDay.items.map((item, index) => {
             if (item.type === "break") {
@@ -255,9 +255,11 @@ const Program = () => {
                 <div key={index} className="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 shadow-md">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                     <span className="text-green-700 font-bold mb-2 md:mb-0">{item.time}</span>
-                    <span className="bg-green-200 text-green-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
-                      {item.sessionName}
-                    </span>
+                    {item.sessionName && (
+                      <span className="bg-green-200 text-green-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
+                        {item.sessionName}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mt-2">{item.title}</h3>
                   {item.presenter && <p className="text-gray-600 mt-2">By: {item.presenter}</p>}
@@ -272,10 +274,11 @@ const Program = () => {
                       <span className="font-mono text-blue-200 mr-4">{item.time}</span>
                       <span className="text-lg font-bold uppercase tracking-wider">{item.sessionName || "Session"}</span>
                     </div>
-                    {item.chair && (
-                      <div className="mt-2 md:mt-0 text-sm">
-                        <span className="text-blue-300">Session Chair: </span>
-                        <span className="font-semibold">{item.chair}</span>
+                    {/* Renderizado de Chair o Moderator a nivel de SESIÓN */}
+                    {(item.chair || item.moderator) && (
+                      <div className="mt-2 md:mt-0 text-sm flex gap-4">
+                        {item.chair && <div><span className="text-blue-300">Chair: </span><span className="font-semibold">{item.chair}</span></div>}
+                        {item.moderator && <div><span className="text-orange-300">Moderator: </span><span className="font-semibold">{item.moderator}</span></div>}
                       </div>
                     )}
                   </div>
@@ -288,7 +291,9 @@ const Program = () => {
                         </div>
                         <div>
                           <h4 className="text-base font-bold text-gray-800 leading-tight">{talk.title}</h4>
-                          <p className="text-sm text-gray-600 mt-1">{talk.presenter}</p>
+                          {/* Renderizado de Moderator a nivel de CHARLA/PANEL */}
+                          {talk.moderator && <p className="text-sm text-blue-700 mt-1 font-semibold">Moderator: {talk.moderator}</p>}
+                          {talk.presenter && <p className="text-sm text-gray-600 mt-1">Speakers: {talk.presenter}</p>}
                         </div>
                       </div>
                     ))}
@@ -301,7 +306,7 @@ const Program = () => {
 
       ) : (
 
-        /* === VISTA CALENDARIO (Nueva Cuadrícula) === */
+        /* === VISTA CALENDARIO === */
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {currentDay.items.map((item, index) => {
             
@@ -320,9 +325,11 @@ const Program = () => {
                 <div key={index} className="bg-green-50 rounded-xl shadow-md border-t-4 border-green-500 p-6 flex flex-col h-full">
                   <span className="text-green-700 font-black text-lg">{item.time}</span>
                   <div className="mt-2">
-                    <span className="bg-green-200 text-green-800 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">
-                      {item.sessionName}
-                    </span>
+                    {item.sessionName && (
+                      <span className="bg-green-200 text-green-800 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">
+                        {item.sessionName}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-base font-bold text-gray-900 mt-4 leading-snug">{item.title}</h3>
                   {item.presenter && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">By: {item.presenter}</p>}
@@ -338,7 +345,9 @@ const Program = () => {
                     <h3 className="text-lg font-bold uppercase tracking-wider text-gray-900 mt-1 leading-tight">
                       {item.sessionName || "General Session"}
                     </h3>
+                    {/* Renderizado de Chair/Moderator a nivel de SESIÓN */}
                     {item.chair && <p className="text-xs text-gray-500 mt-2 font-medium uppercase tracking-wide">Chair: {item.chair}</p>}
+                    {item.moderator && <p className="text-xs text-blue-600 mt-1 font-medium uppercase tracking-wide">Moderator: {item.moderator}</p>}
                   </div>
                   
                   <div className="flex-grow space-y-3">
@@ -349,7 +358,9 @@ const Program = () => {
                           <span className="text-[10px] font-black text-orange-600 uppercase bg-orange-100 px-1.5 py-0.5 rounded">{talk.tag}</span>
                         </div>
                         <h4 className="text-sm font-bold text-gray-800 leading-tight">{talk.title}</h4>
-                        <p className="text-xs text-gray-600 mt-1.5 italic">{talk.presenter}</p>
+                        {/* Renderizado de Moderator a nivel de CHARLA/PANEL */}
+                        {talk.moderator && <p className="text-[11px] text-blue-700 mt-1 font-bold">Moderator: {talk.moderator}</p>}
+                        {talk.presenter && <p className="text-xs text-gray-600 mt-1 italic">Speakers: {talk.presenter}</p>}
                       </div>
                     ))}
                   </div>
