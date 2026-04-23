@@ -13,7 +13,8 @@ import sponsor1Img from '../assets/images/IEEE_Logo.png';
 import sponsor2Img from '../assets/images/MTT_Logo.svg';
 import sponsor3Img from '../assets/images/BPC_Logo.svg';
 import sponsor4Img from '../assets/images/PUCP_Logo.png';
-import sponsor5Img from '../assets/images/Telecom_Logo.png';
+import sponsor5Img from '../assets/images/logo_fci.svg';
+import sponsor6Img from '../assets/images/Telecom_Logo.png';
 
 // IMPORTA LAS FOTOS DE LOS SPEAKERS AQUÍ:
 import speakerAnding from '../assets/images/Anding.png';
@@ -298,6 +299,15 @@ const About = () => {
                 <img 
                   src={sponsor5Img} 
                   alt="Sponsor 5" 
+                  className="max-w-full max-h-full object-contain" 
+                /> 
+              </div>
+
+              {/* Sponsor 6*/}
+              <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
+                <img 
+                  src={sponsor6Img} 
+                  alt="Sponsor 6" 
                   className="max-w-full max-h-full object-contain" 
                 /> 
               </div>
