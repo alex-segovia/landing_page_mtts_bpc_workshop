@@ -13,7 +13,7 @@ import sponsor1Img from '../assets/images/IEEE_Logo.png';
 import sponsor2Img from '../assets/images/MTT_Logo.svg';
 import sponsor3Img from '../assets/images/BPC_Logo.svg';
 import sponsor4Img from '../assets/images/PUCP_Logo.png';
-import sponsor5Img from '../assets/images/logo_fci.svg';
+import sponsor5Img from '../assets/images/LogoFCI.svg';
 import sponsor6Img from '../assets/images/Telecom_Logo.png';
 
 // IMPORTA LAS FOTOS DE LOS SPEAKERS AQUÍ:
