@@ -26,8 +26,14 @@ import speakerMohammad from '../assets/images/Mohammad.png';
 import speakerJose from '../assets/images/Jose.png';
 import speakerVictor from '../assets/images/Victor.png';
 
+import defaultSpeaker from '../assets/images/FotoPorDefecto.png'
+
 const About = () => {
   const navigate = useNavigate(); 
+
+  // --- NUEVO ESTADO PARA LAS PESTAÑAS DE SPEAKERS ---
+  // Puede ser 'mtts', 'regional', o 'local'
+  const [activeTab, setActiveTab] = useState('mtts');
 
   // --- LÓGICA DEL CONTADOR REGRESIVO ---
   const calculateTimeLeft = () => {
@@ -70,7 +76,7 @@ const About = () => {
     { id: 6, label: 'Team Roundtable', src: interiorViewImg }
   ];
 
-  // --- ESTRUCTURA DE DATOS PARA SPEAKERS ---
+  // --- ESTRUCTURA DE DATOS PARA SPEAKERS Y COMITÉ ---
   const speakersList = [
     { id: 1, name: 'Anding Zhu', role: 'President', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerAnding },
     { id: 2, name: 'Debabani Choudhury', role: 'Chair', org: 'IEEE MTT-S BPC', role2: 'IEEE Fellow', photo: speakerDebabani },
@@ -80,6 +86,25 @@ const About = () => {
     { id: 6, name: 'Mohammad Zarifi', role: 'Distinguished Microwave Lecturer', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerMohammad },
     { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'Vice Chair, Education Committee', photo: speakerJose },
     { id: 8, name: 'Victor Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor }
+  ];
+
+  const regionalSpeakersList = [
+    { id: 1, name: 'Manuel Yarlequé', role: 'PUCP', org: '', photo: defaultSpeaker },
+    { id: 2, name: 'Ebert San Román', role: 'UCSP', org: '', photo: defaultSpeaker },
+    { id: 3, name: 'Gustavo Siles', role: 'UPB', org: '', photo: defaultSpeaker },
+    { id: 4, name: 'Martin Sarango', role: 'PUCP', org: '', photo: defaultSpeaker }
+  ];
+
+  const localCommitteeList = [
+    { id: 1, name: 'Manuel Yarlequé', role: 'Chair', org: 'Workshop', photo: defaultSpeaker },
+    { id: 2, name: 'Sthefany Alvarez', role: 'Co-chair', org: 'Workshop', photo: defaultSpeaker },
+    { id: 3, name: 'Hansel Martínez', role: 'Technical coordinator', org: 'Workshop', photo: defaultSpeaker },
+    { id: 4, name: 'Josh Yauri', role: 'Chair', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
+    { id: 5, name: 'Alex Segovia', role: 'Co-chair', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
+    { id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
+    { id: 7, name: 'Jamilet Cervantes', role: 'Protocol Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
+    { id: 8, name: 'Pablo Flores', role: 'Logistic Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
+    { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker }
   ];
 
   return (
@@ -151,7 +176,6 @@ const About = () => {
               View Program
             </button>
           </div>
-
         </div>
       </header>
 
@@ -175,36 +199,106 @@ const About = () => {
           </div>
         </section>
 
-        {/* Section 1: Speakers (Mapeado dinámico con imágenes ajustadas) */}
-        <section className="max-w-7xl mx-auto pb-20 px-8 text-center border-b border-blue-900/5">
-          <h2 className="text-3xl font-bold text-blue-900 mb-12">MTT-S Keynote Speakers</h2>
+        {/* --- SECCIÓN UNIFICADA DE SPEAKERS (TIPO PASARELA DE GRUPOS) --- */}
+        <section className="max-w-7xl mx-auto pb-20 px-4 sm:px-8 text-center border-b border-blue-900/5">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {speakersList.map(speaker => (
-              <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-                
-                {/* Contenedor de la imagen del speaker */}
-                {/* Nota: bg-gray-200 será el color de relleno si la foto no es cuadrada */}
-                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
-                  <img 
-                    src={speaker.photo} 
-                    alt={speaker.name} 
-                    className={`w-full h-full ${speaker.id === 8 ? 'object-contain' : 'object-cover object-top'}`} 
-                  />
-                </div>
-                
-                <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
-                <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
-                <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
-                <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role2}</p>
+          <h2 className="text-3xl font-bold text-blue-900 mb-8">Meet the Team</h2>
+
+          {/* CONTROLES DE LAS PESTAÑAS */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12 bg-white p-2 rounded-2xl shadow-sm border border-gray-100 inline-flex">
+            <button 
+              onClick={() => setActiveTab('mtts')}
+              className={`px-6 py-3 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
+                activeTab === 'mtts' 
+                  ? 'bg-blue-900 text-white shadow-md' 
+                  : 'text-gray-500 hover:bg-gray-100 hover:text-blue-900'
+              }`}
+            >
+              MTT-S Keynote Speakers
+            </button>
+            <button 
+              onClick={() => setActiveTab('regional')}
+              className={`px-6 py-3 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
+                activeTab === 'regional' 
+                  ? 'bg-blue-900 text-white shadow-md' 
+                  : 'text-gray-500 hover:bg-gray-100 hover:text-blue-900'
+              }`}
+            >
+              Regional Speakers
+            </button>
+            <button 
+              onClick={() => setActiveTab('local')}
+              className={`px-6 py-3 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
+                activeTab === 'local' 
+                  ? 'bg-blue-900 text-white shadow-md' 
+                  : 'text-gray-500 hover:bg-gray-100 hover:text-blue-900'
+              }`}
+            >
+              Local Organization Committee
+            </button>
+          </div>
+
+          {/* CONTENIDO DE LAS PESTAÑAS (Las "Páginas") */}
+          <div className="min-h-[400px]"> {/* Altura mínima para que no salte la página al cambiar de tab */}
+            
+            {/* PÁGINA 1: MTT-S Keynotes */}
+            {activeTab === 'mtts' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-fadeIn">
+                {speakersList.map(speaker => (
+                  <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
+                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
+                      <img 
+                        src={speaker.photo} 
+                        alt={speaker.name} 
+                        className={`w-full h-full ${speaker.id === 8 ? 'object-contain' : 'object-cover object-top'}`} 
+                      />
+                    </div>
+                    <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
+                    <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
+                    <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
+                    {speaker.role2 && <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role2}</p>}
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
+
+            {/* PÁGINA 2: Regional Speakers */}
+            {activeTab === 'regional' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fadeIn">
+                {regionalSpeakersList.map(speaker => (
+                  <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
+                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
+                      <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                    <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
+                    <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
+                    <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* PÁGINA 3: Local Committee */}
+            {activeTab === 'local' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+                {localCommitteeList.map(member => (
+                  <div key={member.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group flex flex-col items-center">
+                    <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                    <h4 className="font-bold text-lg text-blue-900 text-center">{member.name}</h4>
+                    <p className="text-sm text-gray-600 font-semibold mt-1 text-center">{member.role}</p>
+                    <p className="text-xs text-orange-500 italic font-medium mt-1 text-center">{member.org}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
           </div>
         </section>
 
         {/* Section 2: Location */}
         <section className="max-w-7xl mx-auto py-20 px-8 border-b border-blue-900/5">
-          
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
             <div className="lg:w-1/3 text-center lg:text-left">
               <h2 className="text-3xl font-bold text-blue-900 mb-6 drop-shadow-sm">Location</h2>
@@ -255,61 +349,26 @@ const About = () => {
         {/* Section 3: Sponsors */}
         <section className="py-20 px-8 text-center border-t border-blue-900/5">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-blue-900 mb-10">Our Sponsors</h2>
+            <h2 className="text-3xl font-bold text-blue-900 mb-10">Our Organizers</h2>
             
             <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-              {/* Sponsor 1 */}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor1Img} 
-                  alt="Sponsor 1" 
-                  className="max-w-full max-h-full object-contain" 
-                />
+                <img src={sponsor1Img} alt="Sponsor 1" className="max-w-full max-h-full object-contain" />
               </div>
-              
-              {/* Sponsor 2 */}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor2Img} 
-                  alt="Sponsor 2" 
-                  className="max-w-full max-h-full object-contain" 
-                />
+                <img src={sponsor2Img} alt="Sponsor 2" className="max-w-full max-h-full object-contain" />
               </div>
-              
-              {/* Sponsor 3 */}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor3Img} 
-                  alt="Sponsor 3" 
-                  className="max-w-full max-h-full object-contain" 
-                />
+                <img src={sponsor3Img} alt="Sponsor 3" className="max-w-full max-h-full object-contain" />
               </div>
-              
-              {/* Sponsor 4*/}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor4Img} 
-                  alt="Sponsor 4" 
-                  className="max-w-full max-h-full object-contain" 
-                /> 
+                <img src={sponsor4Img} alt="Sponsor 4" className="max-w-full max-h-full object-contain" /> 
               </div>
-
-              {/* Sponsor 5*/}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor5Img} 
-                  alt="Sponsor 5" 
-                  className="max-w-full max-h-full object-contain" 
-                /> 
+                <img src={sponsor5Img} alt="Sponsor 5" className="max-w-full max-h-full object-contain" /> 
               </div>
-
-              {/* Sponsor 6*/}
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
-                <img 
-                  src={sponsor6Img} 
-                  alt="Sponsor 6" 
-                  className="max-w-full max-h-full object-contain" 
-                /> 
+                <img src={sponsor6Img} alt="Sponsor 6" className="max-w-full max-h-full object-contain" /> 
               </div>
             </div>
           </div>
