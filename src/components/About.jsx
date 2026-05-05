@@ -86,7 +86,7 @@ const About = () => {
     { id: 5, name: 'Imran Mehdi', role: 'Publications Chair', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerImran },
     { id: 6, name: 'Mohammad Zarifi', role: 'Distinguished Microwave Lecturer', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerMohammad },
     { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'Vice Chair, Education Committee', photo: speakerJose },
-    { id: 8, name: 'Victor Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor }
+    { id: 8, name: 'Victor Manuel Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor }
   ];
 
   const regionalSpeakersList = [
