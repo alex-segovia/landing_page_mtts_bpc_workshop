@@ -15,6 +15,7 @@ import sponsor3Img from '../assets/images/BPC_Logo.svg';
 import sponsor4Img from '../assets/images/PUCP_Logo.png';
 import sponsor5Img from '../assets/images/LogoFCI.svg';
 import sponsor6Img from '../assets/images/Telecom_Logo.png';
+import sponsor7Img from '../assets/images/LogoBPC.svg';
 
 // IMPORTA LAS FOTOS DE LOS SPEAKERS AQUÍ:
 import speakerAnding from '../assets/images/Anding.png';
@@ -348,7 +349,7 @@ const About = () => {
 
         {/* Section 3: Sponsors */}
         <section className="py-20 px-8 text-center border-t border-blue-900/5">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-blue-900 mb-10">Our Organizers</h2>
             
             <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
@@ -360,6 +361,9 @@ const About = () => {
               </div>
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img src={sponsor3Img} alt="Sponsor 3" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
+                <img src={sponsor7Img} alt="Sponsor 7" className="max-w-full max-h-full object-contain" /> 
               </div>
               <div className="w-56 h-32 bg-white rounded-2xl flex items-center justify-center p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
                 <img src={sponsor4Img} alt="Sponsor 4" className="max-w-full max-h-full object-contain" /> 
