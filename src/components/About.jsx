@@ -27,6 +27,22 @@ import speakerMohammad from '../assets/images/Mohammad.png';
 import speakerJose from '../assets/images/Jose.png';
 import speakerVictor from '../assets/images/Victor.png';
 
+import photoYarleque from '../assets/images/FotoYarleque.jpg';
+import photoSthefany from '../assets/images/FotoSthefany.png';
+import photoHansel from '../assets/images/FotoHansel.jpg';
+import photoJosh from '../assets/images/FotoJosh.png';
+import photoAlex from '../assets/images/FotoAlex.jpeg';
+import photoJair from '../assets/images/FotoJair.png';
+import photoJamilet from '../assets/images/FotoJamilet.png';
+import photoPablo from '../assets/images/FotoPablo.png';
+import photoBrizbana from '../assets/images/FotoBrizbana.png';
+import photoSarango from '../assets/images/FotoSarango.jpeg';
+import photoSiles from '../assets/images/FotoSiles.jpeg';
+import photoSanRoman from '../assets/images/FotoSanRoman.png';
+import photoChee from '../assets/images/FotoChee.jpg';
+
+import boliviaFlag from '../assets/images/BanderaBolivia.png';
+
 import defaultSpeaker from '../assets/images/FotoPorDefecto.png'
 
 const About = () => {
@@ -90,22 +106,23 @@ const About = () => {
   ];
 
   const regionalSpeakersList = [
-    { id: 1, name: 'Manuel Yarlequé', role: 'PUCP', org: '', photo: defaultSpeaker },
-    { id: 2, name: 'Ebert San Román', role: 'UCSP', org: '', photo: defaultSpeaker },
-    { id: 3, name: 'Gustavo Siles', role: 'UPB', org: '', photo: defaultSpeaker },
-    { id: 4, name: 'Martin Sarango', role: 'PUCP', org: '', photo: defaultSpeaker }
+    { id: 1, name: 'Manuel Yarlequé', role: 'Professor', org: 'Pontificia Universidad Católica del Perú', role2: 'Lima, Perú', photo: photoYarleque },
+    { id: 2, name: 'Ebert San Román', role: 'Professor', org: 'Universidad Católica San Pablo', role2: 'Arequipa, Perú', photo: photoSanRoman },
+    { id: 3, name: 'Gustavo Siles', role: 'Professor', org: 'Universidad Privada Boliviana', role2: 'Cochabamba, Bolivia', photo: photoSiles },
+    { id: 4, name: 'Martin Sarango', role: 'Senior Consultant & Researcher', org: 'Quantum Defense and Space', role2: '', photo: photoSarango },
+    { id: 5, name: 'Christian Chee', role: 'VP Business Development', org: 'GILAT Perú', role2: '', photo: photoChee }
   ];
 
   const localCommitteeList = [
-    { id: 1, name: 'Manuel Yarlequé', role: 'Chair', org: 'Workshop', photo: defaultSpeaker },
-    { id: 2, name: 'Sthefany Alvarez', role: 'Co-chair', org: 'Workshop', photo: defaultSpeaker },
-    { id: 3, name: 'Hansel Martínez', role: 'Technical coordinator', org: 'Workshop', photo: defaultSpeaker },
-    { id: 4, name: 'Josh Yauri', role: 'Chair', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
-    { id: 5, name: 'Alex Segovia', role: 'Co-chair', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
-    { id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
-    { id: 7, name: 'Jamilet Cervantes', role: 'Protocol Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
-    { id: 8, name: 'Pablo Flores', role: 'Logistic Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker },
-    { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: defaultSpeaker }
+    { id: 1, name: 'Manuel Yarlequé', role: 'Chair', org: 'Workshop', photo: photoYarleque },
+    { id: 2, name: 'Sthefany Alvarez', role: 'Co-chair', org: 'Workshop', photo: photoSthefany },
+    { id: 3, name: 'Hansel Martínez', role: 'Technical coordinator', org: 'Workshop', photo: photoHansel },
+    { id: 4, name: 'Josh Yauri', role: 'Chair', org: 'IEEE MTT-S PUCP', photo: photoJosh },
+    { id: 5, name: 'Alex Segovia', role: 'Co-chair', org: 'IEEE MTT-S PUCP', photo: photoAlex },
+    { id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: photoJair },
+    { id: 7, name: 'Jamilet Cervantes', role: 'Protocol Coordinator', org: 'IEEE MTT-S PUCP', photo: photoJamilet },
+    { id: 8, name: 'Pablo Flores', role: 'Logistic Coordinator', org: 'IEEE MTT-S PUCP', photo: photoPablo },
+    { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: photoBrizbana }
   ];
 
   return (
@@ -267,13 +284,21 @@ const About = () => {
             {activeTab === 'regional' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fadeIn">
                 {regionalSpeakersList.map(speaker => (
-                  <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
-                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
-                      <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                  <div key={speaker.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group flex flex-col items-center">
+                    <div className="w-32 h-32 bg-gray-200 rounded-full mb-4 border-4 border-blue-50 group-hover:border-orange-100 transition-colors relative">
+                      <img src={speaker.photo} alt={speaker.name} className="w-full h-full rounded-full object-cover object-top" />
+                      {speaker.id === 3 && (
+                        <img 
+                          src={boliviaFlag}
+                          alt="Bolivia" 
+                          className="absolute bottom-0 right-0 w-14 h-14 rounded-full z-10" 
+                        />
+                      )}
                     </div>
                     <h4 className="font-bold text-xl text-blue-900">{speaker.name}</h4>
                     <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role}</p>
                     <p className="text-sm text-orange-500 italic font-medium">{speaker.org}</p>
+                    {speaker.role2 && <p className="text-sm text-gray-600 font-semibold mt-1">{speaker.role2}</p>}
                   </div>
                 ))}
               </div>
@@ -281,15 +306,19 @@ const About = () => {
 
             {/* PÁGINA 3: Local Committee */}
             {activeTab === 'local' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fadeIn">
                 {localCommitteeList.map(member => (
-                  <div key={member.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group flex flex-col items-center">
-                    <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                  <div key={member.id} className="bg-white p-6 rounded-2xl border border-white shadow-sm hover:shadow-lg transition-all group">
+                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-50 group-hover:border-orange-100 transition-colors">
+                      <img 
+                        src={member.photo} 
+                        alt={member.name} 
+                        className={`w-full h-full object-cover object-top`} 
+                      />
                     </div>
-                    <h4 className="font-bold text-lg text-blue-900 text-center">{member.name}</h4>
-                    <p className="text-sm text-gray-600 font-semibold mt-1 text-center">{member.role}</p>
-                    <p className="text-xs text-orange-500 italic font-medium mt-1 text-center">{member.org}</p>
+                    <h4 className="font-bold text-xl text-blue-900">{member.name}</h4>
+                    <p className="text-sm text-gray-600 font-semibold mt-1">{member.role}</p>
+                    <p className="text-sm text-orange-500 italic font-medium">{member.org}</p>
                   </div>
                 ))}
               </div>
