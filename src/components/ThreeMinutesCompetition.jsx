@@ -69,7 +69,7 @@ const ThreeMinutesCompetition = () => {
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4">
                   <h4 className="font-bold text-gray-800">Spanish Category</h4>
-                  <p className="text-sm text-gray-600 mt-1">Present topics aligned with the workshop theme in Spanish, delivering impactful content for a non-technical audience.</p>
+                  <p className="text-sm text-gray-600 mt-1">Present a topic of your choice in Spanish, delivering impactful content for a non-technical audience.</p>
                 </div>
               </div>
             </div>
@@ -79,9 +79,9 @@ const ThreeMinutesCompetition = () => {
               <div className="bg-blue-900 text-white p-5 rounded-2xl shadow-md">
                 <h4 className="font-bold text-orange-400 mb-3 text-sm uppercase tracking-wide">Important Dates</h4>
                 <ul className="text-sm space-y-2">
-                  <li><span className="font-bold">May 10:</span> Video Deadline</li>
-                  <li><span className="font-bold">May 14:</span> Finalists Announced</li>
-                  <li><span className="font-bold">May 16-18:</span> Online Mentoring</li>
+                  <li><span className="font-bold">May 21:</span> Video Deadline</li>
+                  <li><span className="font-bold">May 22:</span> Finalists Announced</li>
+                  <li><span className="font-bold">May 23-24:</span> Online Mentoring</li>
                   <li><span className="font-bold text-orange-300">May 25:</span> Grand Finale!</li>
                 </ul>
               </div>
