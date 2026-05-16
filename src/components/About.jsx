@@ -26,6 +26,7 @@ import speakerImran from '../assets/images/Imran.png';
 import speakerMohammad from '../assets/images/Mohammad.png';
 import speakerJose from '../assets/images/Jose.png';
 import speakerVictor from '../assets/images/Victor.png';
+import speakerGoutam from '../assets/images/Goutam Chattopadhyay.jpeg';
 
 import photoYarleque from '../assets/images/FotoYarleque.jpg';
 import photoSthefany from '../assets/images/FotoSthefany.png';
@@ -102,7 +103,8 @@ const About = () => {
     { id: 5, name: 'Imran Mehdi', role: 'Publications Chair', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerImran },
     { id: 6, name: 'Mohammad Zarifi', role: 'Distinguished Microwave Lecturer', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerMohammad },
     { id: 7, name: 'Jose Rayas Sanchez', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'Vice Chair, Education Committee', photo: speakerJose },
-    { id: 8, name: 'Victor Manuel Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor }
+    { id: 8, name: 'Victor Manuel Lubecke', role: 'Speakers Bureau', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerVictor },   
+    { id: 9, name: 'Goutam Chattopadhyay', role: 'MTT-S President 2026', org: 'IEEE MTT-S', role2: 'IEEE Fellow', photo: speakerGoutam }
   ];
 
   const regionalSpeakersList = [
@@ -125,7 +127,7 @@ const About = () => {
     { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: photoBrizbana }
   ];
 
-  return (
+  return (  
     <div className="animate-fadeIn">
       
       {/* Hero Section with Background Image */}
