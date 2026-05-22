@@ -79,9 +79,7 @@ const ThreeMinutesCompetition = () => {
               <div className="bg-blue-900 text-white p-5 rounded-2xl shadow-md">
                 <h4 className="font-bold text-orange-400 mb-3 text-sm uppercase tracking-wide">Important Dates</h4>
                 <ul className="text-sm space-y-2">
-                  <li><span className="font-bold">May 21:</span> Video Deadline</li>
-                  <li><span className="font-bold">May 22:</span> Finalists Announced</li>
-                  <li><span className="font-bold">May 23-24:</span> Online Mentoring</li>
+                  <li><span className="font-bold">May 23:</span> Video Deadline</li>
                   <li><span className="font-bold text-orange-300">May 25:</span> Grand Finale!</li>
                 </ul>
               </div>
