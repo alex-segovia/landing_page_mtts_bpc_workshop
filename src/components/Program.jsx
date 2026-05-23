@@ -56,7 +56,7 @@ const Program = () => {
           time: "11:05 - 11:35",
           sessionName: "Student Competition",
           title: "3MPC (Three Minute Presentation Competition)",
-          presenter: "Session Chair: Jose Rayas Sanchez"
+          presenter: "Jose Rayas Sanchez"
         },
         {
           type: "session",
@@ -90,7 +90,7 @@ const Program = () => {
           time: "14:30 - 15:30",
           sessionName: "Student Mentoring and Competition",
           title: "IEEE MTT-S Publication & Proposal Mentoring",
-          presenter: "Session Chair: Olga Boric-Lubecke"
+          presenter: "Olga Boric-Lubecke"
         },
         { 
           type: "break", 
@@ -103,7 +103,7 @@ const Program = () => {
           time: "16:00 - 19:00",
           sessionName: "Student Competition",
           title: "Student Design Competition",
-          presenter: "Session Chair: Manuel Yarleque"
+          presenter: "Manuel Yarleque"
         }
       ]
     },
@@ -127,7 +127,7 @@ const Program = () => {
             { time: "9:00 - 9:25", tag: "LAM Keynote 1", title: "MTT-S: Igniting Passion and Paving the Future for Young Latin American Engineers", presenter: "Glauco Fontgalland, Mount Union University, USA" },
             { time: "9:25 - 9:40", tag: "LAM Keynote 2", title: "An Overview on MTT-S in Latin America: Status, Benefits, and Opportunities", presenter: "Jose Rayas Sanchez, ITESO, Mexico" },
             { time: "9:40 - 9:55", tag: "LAM Keynote 3", title: "MTT-S Technologies and Engagement in Peru", presenter: "Manuel Yarleque, PUCP, Peru" },
-            { time: "9:55 - 11:00", tag: "MTT-S in Latin America: Panel Discussion", title: "Panel-1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with Broadening Participation Activities: Challenges and Opportunities", presenter: "Anding Zhu, Glauco Fontgalland, Manuel Yarleque, Ebert San Roman, Gustavo Siles, Goutam Chattopadhyay, Jose Rayas Sanchez, Sthefany Alvarez", moderator: "Debabani Choudhury and Victor Manuel Lubecke" }
+            { time: "9:55 - 11:00", tag: "MTT-S in Latin America: Panel Discussion", title: "Panel-1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with Broadening Participation Activities: Challenges and Opportunities", speakers: "Anding Zhu, Glauco Fontgalland, Manuel Yarleque, Ebert San Roman, Gustavo Siles, Goutam Chattopadhyay, Jose Rayas Sanchez, Sthefany Alvarez", moderator: "Debabani Choudhury and Victor Manuel Lubecke" }
           ]
         },
         { 
@@ -162,7 +162,7 @@ const Program = () => {
           sessionName: "Industry/Academia Panel",
           chair: "",
           talks: [
-            { time: "12:15 - 13:00", tag: "Panel #2", title: "Industry/Academia Engagement in South American Landscape", presenter: "Martin Sarango, Christian Chee, Ebert San Roman, Gustavo Siles, Jose Rayas Sanchez, Glauco Fontgalland, Anding Zhu, Olga Boric-Lubecke, Mohammad Zarifi, Imran Mehdi", moderator: "Victor Manuel Lubecke and Debabani Choudhury" }
+            { time: "12:15 - 13:00", tag: "Panel #2", title: "Industry/Academia Engagement in South American Landscape", speakers: "Martin Sarango, Christian Chee, Ebert San Roman, Gustavo Siles, Jose Rayas Sanchez, Glauco Fontgalland, Anding Zhu, Olga Boric-Lubecke, Mohammad Zarifi, Imran Mehdi", moderator: "Victor Manuel Lubecke and Debabani Choudhury" }
           ]
         },
         {
@@ -170,7 +170,7 @@ const Program = () => {
           time: "13:00 - 14:15",
           sessionName: "Student Engagement and Mentoring",
           title: "Group Mentoring Activities for Students and YPs",
-          presenter: "Anding Zhu, Martin Sarango, Gustavo Slies Soria, Christian Chee, Ebert San Roman, Victor Manuel Lubecke, Glauco Fontgalland, Jose Rayas Sanchez, Christian Chee, Mohammad Zarifi, Imran Mehdi, Olga Boric-Lubecke, Debabani Choudhury, Goutam Chattopadhyay"
+          speakers: "Anding Zhu, Martin Sarango, Gustavo Slies Soria, Christian Chee, Ebert San Roman, Victor Manuel Lubecke, Glauco Fontgalland, Jose Rayas Sanchez, Christian Chee, Mohammad Zarifi, Imran Mehdi, Olga Boric-Lubecke, Debabani Choudhury, Goutam Chattopadhyay"
         },
         { 
           type: "break", 
@@ -184,7 +184,7 @@ const Program = () => {
           sessionName: "AWARD Session",
           chair: "Sthefany Alvarez, Workshop Co-Chair",
           talks: [
-            { time: "15:15 - 15:45", tag: "Awards", title: "Announce the Winners of Three Competitions; Award Distribution, Volunteer Certificates and other Recognitions", presenter: "Manuel Yarleque, Glauco Fontgalland, Olga Boric-Lubecke, Jose Rayas Sanchez, Anding Zhu, Debabani Choudhury" }
+            { time: "15:15 - 15:45", tag: "Awards", title: "Announce the Winners of Three Competitions; Award Distribution, Volunteer Certificates and other Recognitions", speakers: "Manuel Yarleque, Glauco Fontgalland, Olga Boric-Lubecke, Jose Rayas Sanchez, Anding Zhu, Debabani Choudhury" }
           ]
         },
         { 
@@ -198,7 +198,7 @@ const Program = () => {
           time: "15:55 - 16:00",
           sessionName: "CLOSING SESSION",
           title: "Close workshop - Vote of Thanks",
-          presenter: "Manuel Yarleque, Debabani Choudhury (Workshop Chair and BPC Chair)"
+          speakers: "Manuel Yarleque, Debabani Choudhury (Workshop Chair and BPC Chair)"
         }
       ]
     }
@@ -277,7 +277,8 @@ const Program = () => {
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mt-2">{item.title}</h3>
-                  {item.presenter && <p className="text-gray-600 mt-2">By: {item.presenter}</p>}
+                  {item.presenter && <p className="text-gray-600 mt-2">Speaker: {item.presenter}</p>}
+                  {item.speakers && <p className="text-gray-600 mt-2">Speakers: {item.speakers}</p>}
                 </div>
               );
             }
@@ -308,7 +309,9 @@ const Program = () => {
                           <h4 className="text-base font-bold text-gray-800 leading-tight">{talk.title}</h4>
                           {/* Renderizado de Moderator a nivel de CHARLA/PANEL */}
                           {talk.moderator && <p className="text-sm text-blue-700 mt-1 font-semibold">Moderator: {talk.moderator}</p>}
-                          {talk.presenter && <p className="text-sm text-gray-600 mt-1">Speakers: {talk.presenter}</p>}
+                          {/* Detección dinámica de Speaker vs Speakers */}
+                          {talk.presenter && <p className="text-sm text-gray-600 mt-1">Speaker: {talk.presenter}</p>}
+                          {talk.speakers && <p className="text-sm text-gray-600 mt-1">Speakers: {talk.speakers}</p>}
                         </div>
                       </div>
                     ))}
@@ -347,7 +350,8 @@ const Program = () => {
                     )}
                   </div>
                   <h3 className="text-base font-bold text-gray-900 mt-4 leading-snug">{item.title}</h3>
-                  {item.presenter && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">By: {item.presenter}</p>}
+                  {item.presenter && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">Speaker: {item.presenter}</p>}
+                  {item.speakers && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">Speakers: {item.speakers}</p>}
                 </div>
               );
             }
@@ -375,7 +379,9 @@ const Program = () => {
                         <h4 className="text-sm font-bold text-gray-800 leading-tight">{talk.title}</h4>
                         {/* Renderizado de Moderator a nivel de CHARLA/PANEL */}
                         {talk.moderator && <p className="text-[11px] text-blue-700 mt-1 font-bold">Moderator: {talk.moderator}</p>}
-                        {talk.presenter && <p className="text-xs text-gray-600 mt-1 italic">Speakers: {talk.presenter}</p>}
+                        {/* Detección dinámica de Speaker vs Speakers */}
+                        {talk.presenter && <p className="text-xs text-gray-600 mt-1 italic">Speaker: {talk.presenter}</p>}
+                        {talk.speakers && <p className="text-xs text-gray-600 mt-1 italic">Speakers: {talk.speakers}</p>}
                       </div>
                     ))}
                   </div>
