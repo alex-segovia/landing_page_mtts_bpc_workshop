@@ -4,12 +4,12 @@ const Program = () => {
   const [selectedDay, setSelectedDay] = useState('day1');
   const [format, setFormat] = useState('list');
 
-  // Estructura de datos completa para ambos días
+  // Estructura de datos completa para ambos días basada en el Excel oficial
   const scheduleData = {
     day1: {
       date: "Monday, May 25, 2026",
       venue: "B100, PUCP Campus, Lima, Perú",
-      theme: "Evolution of MHz to THz Technologies for Sensing and Communication",
+      theme: "Applied Microwaves: Connecting Academia and Industry",
       items: [
         { 
           type: "break", 
@@ -19,77 +19,78 @@ const Program = () => {
         },
         {
           type: "session",
-          time: "9:00 - 9:50",
+          time: "9:00 - 9:45",
           sessionName: "Opening Session",
           chair: "Manuel Yarlequé",
           talks: [
-            { time: "9:00 - 9:05", tag: "Plenary 1", title: "General Chair (Welcome Remarks)", presenter: "Manuel Yarlequé (PUCP)" },
-            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Francisco Rumiche, Decano de la Facultad de Ciencias e Ingeniería (PUCP)" },
-            { time: "9:10 - 9:20", tag: "Plenary 3", title: "IEEE MTT-S President (Welcome Remarks) and MTT-S Overview", presenter: "Anding Zhu (IEEE MTT-S President)" },
-            { time: "9:20 - 9:50", tag: "Plenary 4", title: "Broadening Participation with Application Oriented RF to THz Technologies in the AI Era", presenter: "Debabani Choudhury (IEEE MTT-S BPC Chair)" }
+            { time: "9:00 - 9:05", tag: "Plenary 1", title: "General Chair (Welcome Remarks)", presenter: "Manuel Yarlequé" },
+            { time: "9:05 - 9:10", tag: "Plenary 2", title: "University Chairman (Welcome Remarks)", presenter: "Francisco Rumiche" },
+            { time: "9:10 - 9:20", tag: "Plenary 3", title: "IEEE MTT-S President: Welcome Remarks and MTT-S Overview", presenter: "Anding Zhu" },
+            { time: "9:20 - 9:45", tag: "Plenary 4", title: "RF-THz Technologies for Broadening Participation in Sensing and Communication", presenter: "Debabani Choudhury, MTT-S BPC Chair, USA" }
           ]
         },
         { 
           type: "break", 
-          time: "9:50 - 10:00", 
+          time: "9:45 - 9:55", 
           title: "Group photo (Official)", 
           bgClass: "bg-blue-100 text-blue-800" 
         },
         {
           type: "session",
-          time: "10:00 - 11:00",
-          sessionName: "MTT-S Session 1",
-          chair: "Olga Boric Lubecke (IEEE MTT-S BPC/FDC Co-Chair)",
+          time: "9:55 - 10:50",
+          sessionName: "MTT-S Session #1",
+          chair: "Olga Boric-Lubecke",
           talks: [
-            { time: "10:00 - 10:30", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu (IEEE MTT-S President)" },
-            { time: "10:30 - 11:00", tag: "Keynote 2", title: " Microwave Engineering for Space Exploration", presenter: "Imran Mehdi (Publications Chair, IEEE MTT-S, IEEE Fellow)" }
+            { time: "9:55 - 10:20", tag: "Keynote 1", title: "Powering the Future of Wireless: Efficiency and Linearity Challenges in 6G Transmitters", presenter: "Anding Zhu, UCD, Ireland and MTT-S President, 2026" },
+            { time: "10:25 - 10:50", tag: "Keynote 2", title: "MHz to THz Technologies and Our Place in the Universe", presenter: "Goutam Chattopadhyay, MTT-S Past President 2025" }
           ]
         },
         { 
           type: "break", 
-          time: "11:00 - 11:15", 
+          time: "10:50 - 11:05", 
           title: "Coffee/Tea Break", 
           bgClass: "bg-orange-100 text-orange-800" 
         },
         {
           type: "special",
-          time: "11:15 - 11:30",
+          time: "11:05 - 11:35",
           sessionName: "Student Competition",
           title: "3MPC (Three Minute Presentation Competition)",
-          presenter: "Jose Rayas Sanchez (MTT-S Speakers Bureau), Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair)"
+          presenter: "Session Chair: Jose Rayas Sanchez"
         },
         {
           type: "session",
-          time: "11:30 - 13:00",
-          sessionName: "MTT-S Session 2",
-          chair: "Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair)",
+          time: "11:35 - 13:15",
+          sessionName: "MTT-S Session #2",
+          chair: "Glauco Fontgalland",
           talks: [
-            { time: "11:30 - 12:00", tag: "Keynote 3", title: "ISAC Biomedical Sensing", presenter: "Victor Manuel Lubecke (MTT-S Speakers Bureau)" },
-            { time: "12:00 - 12:30", tag: "Keynote 4", title: "Smart Microwave Sensors Bridging Laboratory to Industry", presenter: "Mohammad Zarifi (Distinguished Microwave Lecturer, IEEE MTT-S, IEEE Fellow)" },
-            { time: "12:30 - 13:00", tag: "Keynote 5", title: "Space Mapping Design Optimization: Power in Simplicity Rooted in Engineering Practice", presenter: "Jose Rayas Sanchez (MTT-S Speakers Bureau)" }
+            { time: "11:35 - 12:00", tag: "Keynote 3", title: "ISAC Biomedical Sensing", presenter: "Victor Manuel Lubecke, University of Hawaii, USA (SB)" },
+            { time: "12:00 - 12:25", tag: "Keynote 4", title: "Smart Microwave Sensors Bridging Laboratory to Industry", presenter: "Mohammad Zarifi, UCB, Canada (DML)" },
+            { time: "12:25 - 12:50", tag: "Keynote 5", title: "Microwave Engineering for Space Exploration", presenter: "Imran Mehdi, Caltech, USA" },
+            { time: "12:50 - 13:15", tag: "Keynote 6", title: "Space Mapping Design Optimization: Power in Simplicity Rooted in Engineering Practice", presenter: "Jose Rayas Sanchez, ITESO, Mexico (SB)" }
           ]
         },
         { 
           type: "break", 
-          time: "13:00 - 14:00", 
+          time: "13:15 - 14:15", 
           title: "Lunch", 
           bgClass: "bg-orange-100 text-orange-800" 
         },
         {
           type: "session",
-          time: "14:00 - 14:30",
+          time: "14:15 - 14:30",
           sessionName: "MTT-S Mentoring",
-          chair: "",
+          chair: "Anding Zhu",
           talks: [
-            { time: "14:00 - 14:30", tag: "Keynote 6", title: "How to write technical articles and Academic Proposals for MTT-S", presenter: "Olga Boric Lubecke (IEEE MTT-S BPC/FDC Co-Chair)" }
+            { time: "14:15 - 14:30", tag: "Keynote 7", title: "How to write academic proposals (Articles, Scholarships, Competitions)", presenter: "Olga Boric Lubecke, Univ. of Hawaii, USA and BPC Vice-Chair" }
           ]
         },
         {
           type: "special",
           time: "14:30 - 15:30",
-          sessionName: "Student Competition & Mentoring",
-          title: "IEEE MTT-S Publications & Proposal Mentoring",
-          presenter: ""
+          sessionName: "Student Mentoring and Competition",
+          title: "IEEE MTT-S Publication & Proposal Mentoring",
+          presenter: "Session Chair: Olga Boric-Lubecke"
         },
         { 
           type: "break", 
@@ -102,14 +103,14 @@ const Program = () => {
           time: "16:00 - 19:00",
           sessionName: "Student Competition",
           title: "Student Design Competition",
-          presenter: "Manuel Yarlequé (PUCP)"
+          presenter: "Session Chair: Manuel Yarleque"
         }
       ]
     },
     day2: {
       date: "Tuesday, May 26, 2026",
       venue: "B100, PUCP Campus, Lima, Perú",
-      theme: "Coming soon",
+      theme: "Applied Microwaves: Connecting Academia and Industry",
       items: [
         { 
           type: "break", 
@@ -119,80 +120,85 @@ const Program = () => {
         },
         {
           type: "session",
-          time: "9:00 - 10:35",
-          sessionName: "Latin America (LAM) MTT-S Engagement Session",
-          chair: "",
+          time: "9:00 - 11:00",
+          sessionName: "Latin America (LAM) - MTT-S Engagement Session",
+          chair: "Manuel Yarleque",
           talks: [
-            { time: "9:00 - 9:25", tag: "LAM Keynote 1", title: "Latin America + MTT-S MGA", presenter: "Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair)" },
-            { time: "9:25 - 9:35", tag: "LAM Keynote 2", title: "Latin America Re-engagement", presenter: "Jose Rayas Sanchez (MTT-S Speakers Bureau)" },
-            { time: "9:35 - 9:50", tag: "LAM Keynote 3", title: "MTT-S Technologies and Engagement in Peru", presenter: "Manuel Yarlequé (PUCP)" },
-            { time: "9:50 - 10:35", tag: "MTT-S in Latin America: Panel Discussion", title: "Panel 1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with BPC Activities: Challenges and Opportunities", presenter: "Anding Zhu (IEEE MTT-S President), Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair), Manuel Yarlequé (PUCP), Ebert San Román (Professor, UCSP), Gustavo Siles (Professor, UPB), Jose Rayas Sanchez (MTT-S Speakers Bureau), Sthefany Alvarez (PUCP)", moderator: "Debabani Choudhury (IEEE MTT-S BPC Chair)" }
+            { time: "9:00 - 9:25", tag: "LAM Keynote 1", title: "MTT-S: Igniting Passion and Paving the Future for Young Latin American Engineers", presenter: "Glauco Fontgalland, Mount Union University, USA" },
+            { time: "9:25 - 9:40", tag: "LAM Keynote 2", title: "An Overview on MTT-S in Latin America: Status, Benefits, and Opportunities", presenter: "Jose Rayas Sanchez, ITESO, Mexico" },
+            { time: "9:40 - 9:55", tag: "LAM Keynote 3", title: "MTT-S Technologies and Engagement in Peru", presenter: "Manuel Yarleque, PUCP, Peru" },
+            { time: "9:55 - 11:00", tag: "MTT-S in Latin America: Panel Discussion", title: "Panel-1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with Broadening Participation Activities: Challenges and Opportunities", presenter: "Anding Zhu, Glauco Fontgalland, Manuel Yarleque, Ebert San Roman, Gustavo Siles, Goutam Chattopadhyay, Jose Rayas Sanchez, Sthefany Alvarez", moderator: "Debabani Choudhury and Victor Manuel Lubecke" }
           ]
         },
         { 
           type: "break", 
-          time: "10:35 - 10:50", 
+          time: "11:00 - 11:15", 
           title: "Coffee/Tea Break", 
           bgClass: "bg-blue-100 text-blue-800" 
         },
         {
           type: "session",
-          time: "10:50 - 11:20",
+          time: "11:15 - 11:45",
           sessionName: "Regional Faculty Session",
-          chair: "Manuel Yarlequé (PUCP)",
+          chair: "Martin Sarango",
           talks: [
-            { time: "10:50 - 11:05", tag: "Keynote 5", title: "MABIS sistema wearable no invasivo capaz de realizar detección temprana de cáncer de mama mediante el uso de tecnología de imágenes por microondas", presenter: "Ebert San Román (Professor, UCSP)" },
-            { time: "11:05 - 11:20", tag: "Keynote 6", title: "Challenges and opportunities for microwave teaching and research in Bolivia", presenter: "Gustavo Siles (Professor, UPB)" }
+            { time: "11:15 - 11:30", tag: "Keynote 5", title: "MABIS sistema wearable no invasivo capaz de realizar detección temprana de cáncer de mama mediante el uso de tecnología de imágenes por microondas.", presenter: "Ebert San Román, Universidad Católica San Pablo (UCSP), Arequipa, Peru" },
+            { time: "11:30 - 11:45", tag: "Keynote 6", title: "Challenges and opportunities for microwave teaching and research in Bolivia", presenter: "Gustavo Siles Soria, Bolivia Private University, Cochabamba, Bolivia" }
           ]
         },
         {
           type: "session",
-          time: "11:20 - 13:00",
-          sessionName: "Industry Session",
-          chair: "Manuel Yarlequé",
+          time: "11:45 - 12:15",
+          sessionName: "INDUSTRY SESSION",
+          chair: "Glauco Fontgalland",
           talks: [
-            { time: "11:20 - 11:35", tag: "Industry Keynote 1", title: "La industria aeroespacial: experiencia y  oportunidades en Perú", presenter: "Martin Sarango (Quantum Defense and Space, PUCP)" },
-            { time: "12:00 - 12:15", tag: "Industry Keynote 2", title: "Gilat Company", presenter: "Christian Chee (VP Business Development, GILAT Perú)" },
-            { time: "12:15 - 13:00", tag: "Industry/Academia Panel Discussion", title: "Panel 2: Industry/Academia Engagement in South American Landscape", presenter: "Martin Sarango (Quantum Defense and Space, PUCP), Christian Chee (VP Business Development, GILAT Perú), Ebert San Román (Professor, UCSP), Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair), Jose Rayas Sanchez (MTT-S Speakers Bureau), Anding Zhu (IEEE MTT-S President), Olga Boric Lubecke (IEEE MTT-S BPC/FDC Co-Chair), Imran Mehdi (Publications Chair, IEEE MTT-S), Victor Manuel Lubecke (MTT-S Speakers Bureau)", moderator: "Debabani Choudhury (IEEE MTT-S BPC Chair)" }
+            { time: "11:45 - 12:00", tag: "Industry Keynote 1", title: "La industria aeroespacial: experiencia y oportunidades en Perú (The aerospace industry: experience and opportunities in Peru)", presenter: "Martin F. Sarango (Quantum Defense and Space, PUCP), Peru" },
+            { time: "12:00 - 12:15", tag: "Industry Keynote 2", title: "Satcom y VSAT: Conectividad, despliegue o uso de tecnologías microondas en zonas remotas", presenter: "Christian Chee Cucalon, VP Business Development, GILAT, Peru" }
           ]
         },
         {
           type: "session",
-          time: "13:00 - 14:00",
-          sessionName: "Student Event",
+          time: "12:15 - 13:00",
+          sessionName: "Industry/Academia Panel",
           chair: "",
           talks: [
-            { time: "13:00 - 14:00", tag: "Group Mentoring Event", title: "7-10 Mentors", presenter: "Anding Zhu (IEEE MTT-S President), Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair), Jose Rayas Sanchez (MTT-S Speakers Bureau), Manuel Yarlequé (PUCP), Ebert San Román (Professor, UCSP), Victor Manuel Lubecke (MTT-S Speakers Bureau), Olga Boric Lubecke (IEEE MTT-S BPC/FDC Co-Chair), Martin Sarango (Quantum Defense and Space, PUCP), Christian Chee (VP Business Development, GILAT Perú), Mohammad Zarifi (Distinguished Microwave Lecturer, IEEE MTT-S, IEEE Fellow), Imran Mehdi (Publications Chair, IEEE MTT-S, IEEE Fellow)" }
+            { time: "12:15 - 13:00", tag: "Panel #2", title: "Industry/Academia Engagement in South American Landscape", presenter: "Martin Sarango, Christian Chee, Ebert San Roman, Gustavo Siles, Jose Rayas Sanchez, Glauco Fontgalland, Anding Zhu, Olga Boric-Lubecke, Mohammad Zarifi, Imran Mehdi", moderator: "Victor Manuel Lubecke and Debabani Choudhury" }
           ]
-        },
-        
-        { 
-          type: "break", 
-          time: "14:00 - 14:45", 
-          title: "Lunch",
-          bgClass: "bg-orange-100 text-orange-800" 
-        },
-        {
-          type: "session",
-          time: "14:45 - 15:15",
-          sessionName: "Clossing Session",
-          chair: "Sthefany Alvarez (PUCP)",
-          talks: [
-            { time: "14:45 - 15:15", tag: "Award Session", title: "Announce the Winners of Three Competitions; Award Distribution, Volunteer Certificates", presenter: "Anding Zhu (IEEE MTT-S President), Glauco Fontgalland (IEEE MTT-S BPC/MGA Co-Chair), Manuel Yarlequé (PUCP), Olga Boric Lubecke (IEEE MTT-S BPC/FDC Co-Chair), Debabani Choudhury (IEEE MTT-S BPC Chair)" }
-          ]
-        },
-        { 
-          type: "break", 
-          time: "15:40 - 15:45", 
-          title: "Final Photo Session", 
-          bgClass: "bg-orange-100 text-orange-800" 
         },
         {
           type: "special",
-          time: "15:45 - 15:50",
-          sessionName: "",
-          title: "Close Workshop",
-          presenter: "Manuel Yarlequé (PUCP), Debabani Choudhury (IEEE MTT-S BPC Chair)"
+          time: "13:00 - 14:15",
+          sessionName: "Student Engagement and Mentoring",
+          title: "Group Mentoring Activities for Students and YPs",
+          presenter: "Anding Zhu, Martin Sarango, Gustavo Slies Soria, Christian Chee, Ebert San Roman, Victor Manuel Lubecke, Glauco Fontgalland, Jose Rayas Sanchez, Christian Chee, Mohammad Zarifi, Imran Mehdi, Olga Boric-Lubecke, Debabani Choudhury, Goutam Chattopadhyay"
+        },
+        { 
+          type: "break", 
+          time: "14:15 - 15:15", 
+          title: "LUNCH",
+          bgClass: "bg-orange-100 text-orange-800" 
+        },
+        {
+          type: "session",
+          time: "15:15 - 15:45",
+          sessionName: "AWARD Session",
+          chair: "Sthefany Alvarez, Workshop Co-Chair",
+          talks: [
+            { time: "15:15 - 15:45", tag: "Awards", title: "Announce the Winners of Three Competitions; Award Distribution, Volunteer Certificates and other Recognitions", presenter: "Manuel Yarleque, Glauco Fontgalland, Olga Boric-Lubecke, Jose Rayas Sanchez, Anding Zhu, Debabani Choudhury" }
+          ]
+        },
+        { 
+          type: "break", 
+          time: "15:45 - 15:55", 
+          title: "Day-2 Photo Session", 
+          bgClass: "bg-blue-100 text-blue-800" 
+        },
+        {
+          type: "special",
+          time: "15:55 - 16:00",
+          sessionName: "CLOSING SESSION",
+          title: "Close workshop - Vote of Thanks",
+          presenter: "Manuel Yarleque, Debabani Choudhury (Workshop Chair and BPC Chair)"
         }
       ]
     }
