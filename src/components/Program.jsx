@@ -277,7 +277,7 @@ const Program = () => {
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mt-2">{item.title}</h3>
-                  {item.presenter && <p className="text-gray-600 mt-2">Speaker: {item.presenter}</p>}
+                  {item.presenter && <p className="text-gray-600 mt-2">Session Chair: {item.presenter}</p>}
                   {item.speakers && <p className="text-gray-600 mt-2">Speakers: {item.speakers}</p>}
                 </div>
               );
@@ -350,7 +350,7 @@ const Program = () => {
                     )}
                   </div>
                   <h3 className="text-base font-bold text-gray-900 mt-4 leading-snug">{item.title}</h3>
-                  {item.presenter && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">Speaker: {item.presenter}</p>}
+                  {item.presenter && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">Session Chair: {item.presenter}</p>}
                   {item.speakers && <p className="text-sm text-gray-600 mt-auto pt-4 font-medium">Speakers: {item.speakers}</p>}
                 </div>
               );
