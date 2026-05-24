@@ -121,7 +121,7 @@ const About = () => {
     { id: 3, name: 'Hansel Martínez', role: 'Technical coordinator', org: 'Workshop', photo: photoHansel },
     { id: 4, name: 'Josh Yauri', role: 'Chair', org: 'IEEE MTT-S PUCP', photo: photoJosh },
     { id: 5, name: 'Alex Segovia', role: 'Co-chair', org: 'IEEE MTT-S PUCP', photo: photoAlex },
-    { id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: photoJair },
+    //{ id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: photoJair },
     { id: 7, name: 'Jamilet Cervantes', role: 'Protocol Coordinator', org: 'IEEE MTT-S PUCP', photo: photoJamilet },
     { id: 8, name: 'Pablo Flores', role: 'Logistic Coordinator', org: 'IEEE MTT-S PUCP', photo: photoPablo },
     { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: photoBrizbana }
