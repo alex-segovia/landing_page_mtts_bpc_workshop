@@ -37,6 +37,8 @@ import photoJair from '../assets/images/FotoJair.png';
 import photoJamilet from '../assets/images/FotoJamilet.png';
 import photoPablo from '../assets/images/FotoPablo.png';
 import photoBrizbana from '../assets/images/FotoBrizbana.png';
+import photoDaniel from '../assets/images/FotoDaniel.jpeg';
+
 import photoSarango from '../assets/images/FotoSarango.jpeg';
 import photoSiles from '../assets/images/FotoSiles.jpeg';
 import photoSanRoman from '../assets/images/FotoSanRoman.png';
@@ -124,7 +126,8 @@ const About = () => {
     //{ id: 6, name: 'Jair Aguilera', role: 'Secretary', org: 'IEEE MTT-S PUCP', photo: photoJair },
     { id: 7, name: 'Jamilet Cervantes', role: 'Protocol Coordinator', org: 'IEEE MTT-S PUCP', photo: photoJamilet },
     { id: 8, name: 'Pablo Flores', role: 'Logistic Coordinator', org: 'IEEE MTT-S PUCP', photo: photoPablo },
-    { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: photoBrizbana }
+    { id: 9, name: 'Brizbana Palomino', role: 'Social Media Coordinator', org: 'IEEE MTT-S PUCP', photo: photoBrizbana },
+    { id: 10, name: 'Daniel Vargas', role: 'Operations Coordinator', org: 'IEEE MTT-S PUCP', photo: photoDaniel }
   ];
 
   return (  
