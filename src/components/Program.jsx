@@ -56,7 +56,7 @@ const Program = () => {
           time: "11:05 - 11:35",
           sessionName: "Student Competition",
           title: "3MPC (Three Minute Presentation Competition)",
-          presenter: "Jose Rayas Sanchez"
+          presenter: "Jose Rayas Sanchez (MTT-S Education Committee Vice-Chair)"
         },
         {
           type: "session",
@@ -125,7 +125,7 @@ const Program = () => {
           chair: "Manuel Yarleque",
           talks: [
             { time: "9:00 - 9:25", tag: "LAM Keynote 1", title: "MTT-S: Igniting Passion and Paving the Future for Young Latin American Engineers", presenter: "Glauco Fontgalland, Mount Union University, USA" },
-            { time: "9:25 - 9:40", tag: "LAM Keynote 2", title: "An Overview on MTT-S in Latin America: Status, Benefits, and Opportunities", presenter: "Jose Rayas Sanchez, ITESO, Mexico" },
+            { time: "9:25 - 9:40", tag: "LAM Keynote 2", title: "An Overview on MTT-S in Latin America: Status, Benefits, and Opportunities", presenter: "Jose Rayas Sanchez (MTT-S R9 Coordinator and Speakers Bureau Member)" },
             { time: "9:40 - 9:55", tag: "LAM Keynote 3", title: "MTT-S Technologies and Engagement in Peru", presenter: "Manuel Yarleque, PUCP, Peru" },
             { time: "9:55 - 11:00", tag: "MTT-S in Latin America: Panel Discussion", title: "Panel-1: Enhancing IEEE MTT-S Engagement and Creating Impacts in the Latin America Region with Broadening Participation Activities: Challenges and Opportunities", speakers: "Anding Zhu, Glauco Fontgalland, Manuel Yarleque, Ebert San Roman, Gustavo Siles, Goutam Chattopadhyay, Jose Rayas Sanchez, Sthefany Alvarez", moderator: "Debabani Choudhury and Victor Manuel Lubecke" }
           ]
